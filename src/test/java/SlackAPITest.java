@@ -100,7 +100,7 @@ public class SlackAPITest {
     public void fileDeleteTest() throws Exception {
         /*
             Test files.delete, call this api and confirm it is deleted.
-            If file doed not exist, check returned error message.
+            If file does not exist, check returned error message.
          */
         String fileName = "APIUploadPng";
         String filePath = getPath();
