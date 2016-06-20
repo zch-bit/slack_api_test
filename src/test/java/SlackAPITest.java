@@ -27,7 +27,7 @@ public class SlackAPITest {
     @Test
     public void uploadFilesTest() {
         /*
-            Testing upload Image. Image is less than 1M, with PNG file type.
+            Testing upload Image. Image is less than 1 M, with PNG file type.
             Check returned Image ID and expected Thumbnails URLs.
          */
         String fileName = "APIUploadPng";
