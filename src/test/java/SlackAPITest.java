@@ -14,6 +14,9 @@ import java.io.File;
 public class SlackAPITest {
 
     public String getPath() {
+        /*
+            Get the path of testing image.
+         */
         String currentDirectory;
         File file = new File("");
 
@@ -23,6 +26,10 @@ public class SlackAPITest {
 
     @Test
     public void uploadFilesTest() {
+        /*
+            Testing upload Image. Image is less than 1M, with PNG file type.
+            Check returned Image ID and expected Thumbnails URLs.
+         */
         String fileName = "APIUploadPng";
         String filePath = getPath();
         String token = "xoxp-52263253139-52322452210-52306300182-e7c9c273cf";
@@ -52,6 +59,10 @@ public class SlackAPITest {
 
     @Test
     public void filesListTest() throws Exception {
+        /*
+            Testing listing all the images: Upload file first, return Image ID.
+            Compare ID with returned value by call files.list api.
+         */
         String fileName = "APIUploadPng";
         String filePath = getPath();
         String token = "xoxp-52263253139-52322452210-52306300182-e7c9c273cf";
@@ -87,6 +98,10 @@ public class SlackAPITest {
 
     @Test
     public void fileDeleteTest() throws Exception {
+        /*
+            Test files.delete, call this api and confirm it is deleted.
+            If file doed not exist, check returned error message.
+         */
         String fileName = "APIUploadPng";
         String filePath = getPath();
         String token = "xoxp-52263253139-52322452210-52306300182-e7c9c273cf";
